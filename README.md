@@ -436,6 +436,12 @@ catalog (`GET /v1/models`) and pick a model; models the provider adds later appe
 next refresh. For example, [NotHoly](https://notholy.com) (offensive-security models) uses
 base URL `https://api.notholy.com/v1` with an API key from its console.
 
+**Remote MCP tools**: beyond the model, ARTEX can consume a remote MCP server (System
+Settings → add a remote MCP, transport `http` / Streamable HTTP, with an `Authorization`
+header). NotHoly serves one at `https://api.notholy.com/mcp` with the same key, which adds
+offensive-security tools to the agent — CVE and advisory lookup, knowledge-base search, web
+and file analysis, and passive asset intel — alongside the model.
+
 **Concurrency**: work agents per task, in "System Settings" (default 3).
 
 **Untrusted-output boundary (on by default)**: tool results for the worker, planner, chat and main
